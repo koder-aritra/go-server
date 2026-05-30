@@ -1,38 +1,36 @@
-# AGENTS.md - Project Guide for AI Agents
+# CRITICAL RULES - MUST FOLLOW
 
-## General Rules
-- When uncertain about any decision, design choice, or course of action — ask the user before proceeding. Do not assume.
+## RESPONSES
 
-## Project Overview
-A Go web server project (initial scaffold; intended to grow into an HTTP server serving static files).
+- Keep responses concise and to the point - unless the user asks otherwise
 
-## Repository
-- **URL**: `https://github.com/koder-aritra/go-server`
-- **Remote**: `origin` → `https://github.com/koder-aritra/go-server.git`
+## PLANNING MODE
 
-## Project State
-- **Module**: `github.com/koder-aritra/go-server` (Go 1.26.3)
-- **Dependencies**: Stdlib only (`fmt`). Planned: `net/http`, `log`.
-- **Static assets**: `static/` directory (empty) for future HTML/CSS/JS.
+- Always ask clarifying questions
+- Never assume design, tech stack or features
+- Use deep-dive sub-agents to assist with research
+- Use deep-dive sub-agents to review the different aspects of your plan before presenting to the user
 
-## Commands
+## CHANGE / EDIT MODE
 
-| Action | Command |
-|---|---|
-| Run | `go run .` |
-| Build | `go build -o server.exe .` |
-| Test | `go test ./...` |
-| Format | `go fmt ./...` |
-| Vet | `go vet ./...` |
+- Never implement features yourself when possible - use sub-agents!
+- Identify changes from the plan that can be implemented in parallel, and use sub-agents to implement the features efficiently
+- When using sub-agents to implement features, act as a coordinator only
+- Use the best model for the task - premium models for complex tasks (like coding) and mid-tier models for simpler tasks, like documentation
+- After completing features (large or small), always run commands like lint, type check and next build to check code quality
 
-## Conventions
-- Keep the project as a single `main` package until it grows enough to warrant splitting into subpackages.
-- Use stdlib `net/http` for the HTTP server (no third-party frameworks unless discussed).
-- Test files: `*_test.go` alongside source files, using stdlib `testing` package.
-- No comments in production code unless the logic is non-obvious.
-- Run `go fmt ./...` and `go vet ./...` before every commit.
+## DATABASE SCHEMA CHANGES
 
-## Future Plans (inferred from commented-out imports)
-- Serve static files from `static/` directory.
-- HTTP server with stdlib `net/http`.
-- Logging via stdlib `log` package.
+- Whenever you make changes to the database schema, ALWAYS run the drizzle generate and migrate commands
+- NEVER run drizzle push!
+
+## TESTING
+
+- Use any testing tools, libraries available to the project for testing your changes
+- Never assume your changes simply work, always test!
+- If the project does not have any testing tools, scripts, MCP tools, skills, etc. available for testing, ask the user whether testing should be skipped.
+
+## UI DESIGN
+
+- Always follow the UI design system when creating or reviewing components or pages.
+- Design System: @DESIGN.md
