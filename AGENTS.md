@@ -6,8 +6,12 @@
 ## Project Overview
 A Go web server project (initial scaffold; intended to grow into an HTTP server serving static files).
 
+## Repository
+- **URL**: `https://github.com/koder-aritra/go-server`
+- **Remote**: `origin` → `https://github.com/koder-aritra/go-server.git`
+
 ## Project State
-- **Module**: Not yet initialized (no `go.mod`). Run `go mod init github.com/<user>/go-server` before adding dependencies.
+- **Module**: `github.com/koder-aritra/go-server` (Go 1.26.3)
 - **Dependencies**: Stdlib only (`fmt`). Planned: `net/http`, `log`.
 - **Static assets**: `static/` directory (empty) for future HTML/CSS/JS.
 
