@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "go": {
+      "source": "miles990/claude-software-skills",
+      "sourceType": "github",
+      "skillPath": "programming-languages/go/SKILL.md",
+      "computedHash": "6e7d4c8760fdcdf898255b3034a35d66a7c03b3cd7fb7de1ca5c44a9c08a1bd7"
+    },
+    "go-backend-dev": {
+      "source": "googlecloudplatform/devrel-demos",
+      "sourceType": "github",
+      "skillPath": "ai-ml/mcp-servers/godoctor/skills/go-backend-dev/SKILL.md",
+      "computedHash": "61a9dea6fa4f2b5890ef4ad38d5667c5b555d3a734c5db428a52ab2f7ec2d5d0"
+    }
+  }
+}
